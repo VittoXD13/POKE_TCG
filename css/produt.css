@@ -1,0 +1,224 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL Y REINICIO (RESET)
+   ========================================== */
+
+/* Aplica a todos los elementos del sitio web */
+* {
+    /* Incluye el padding y border dentro del ancho y alto total del elemento */
+    box-sizing: border-box;
+    /* Elimina los márgenes externos por defecto del navegador */
+    margin: 0;
+    /* Elimina los rellenos internos por defecto del navegador */
+    padding: 0;
+}
+
+/* Estilos base para el cuerpo de la página */
+body {
+    /* Define la jerarquía de tipografías (prioriza Segoe UI, luego tipografía del sistema) */
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    /* Color de fondo principal para toda la página */
+    background-color: beige;
+    /* Color de texto principal en tono oscuro para asegurar buen contraste */
+    color: #222;
+}
+
+/* ==========================================
+   ENCABEZADO (HEADER)
+   ========================================== */
+
+/* Estructura del contenedor superior */
+header {
+    /* Color de fondo rojo oscuro del encabezado */
+    background-color: darkred;
+    /* Centra horizontalmente todo el contenido interno (texto, navegación) */
+    text-align: center;
+    /* Espaciado interno: 25px arriba, 15px a los lados, 15px abajo */
+    padding: 25px 15px 15px;
+    /* Sombra inferior sutil para darle profundidad y despegarlo del fondo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Título dentro del Header */
+header h2 {
+    /* Color de texto blanco suave para contrastar sobre el fondo rojo */
+    color: whitesmoke;
+    /* Tamaño relativo de la fuente */
+    font-size: 2rem;
+    /* Margen inferior para separarlo del menú de navegación */
+    margin-bottom: 15px;
+    /* Convierte todo el texto del título a mayúsculas */
+    text-transform: uppercase;
+    /* Espaciado adicional entre cada letra */
+    letter-spacing: 1px;
+}
+
+/* ==========================================
+   MENÚ DE NAVEGACIÓN
+   ========================================== */
+
+/* Contenedor de la lista de enlaces */
+.menu {
+    /* Margen de 10px arriba/abajo y 0 a los lados */
+    margin: 10px 0;
+    /* Activa Flexbox para alineación fluida en línea */
+    display: flex;
+    /* Centra horizontalmente los enlaces dentro del contenedor */
+    justify-content: center;
+    /* Alinea verticalmente los elementos al centro */
+    align-items: center;
+    /* Permite que los enlaces pasen a una nueva línea si no caben en pantallas pequeñas */
+    flex-wrap: wrap;
+    /* Separación de 10px entre cada enlace */
+    gap: 10px;
+}
+
+/* Enlaces individuales del menú */
+.menu a {
+    /* Color de texto blanco suave */
+    color: whitesmoke;
+    /* Elimina el subrayado por defecto del enlace */
+    text-decoration: none;
+    /* Margen horizontal entre enlaces */
+    margin: 0 10px;
+    /* Tamaño del texto del enlace */
+    font-size: 1.1rem;
+    /* Grosor de la fuente (semi-negrita) */
+    font-weight: 600;
+    /* Relleno interno: 5px arriba/abajo, 10px a los lados */
+    padding: 5px 10px;
+    /* Bordes redondeados para el área interactiva */
+    border-radius: 5px;
+    /* Transición suave de 0.25s al cambiar color y fondo en estado hover */
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+/* Estado interactivo al pasar el cursor sobre los enlaces */
+.menu a:hover {
+    /* Cambia el color del texto a amarillo Pokémon */
+    color: #ffcb05;
+    /* Agrega un fondo blanco semitransparente al pasar el cursor */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================
+   SECCIÓN Y CUADRÍCULA DE PRODUCTOS
+   ========================================== */
+
+/* Contenedor principal de la cuadrícula de productos */
+#productos {
+    /* Organiza los elementos en una cuadrícula CSS (Grid) */
+    display: grid;
+    /* Cuadrícula responsiva automática: crea columnas de mínimo 260px y las expande por igual */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Espacio o separación de 25px entre cada tarjeta */
+    gap: 25px;
+    /* Ancho máximo para evitar que las tarjetas se estiren demasiado en pantallas anchas */
+    max-width: 1100px;
+    /* Centra la cuadrícula automáticamente en la pantalla horizontalmente */
+    margin: 0 auto;
+    /* Espaciado interno: 40px arriba/abajo, 20px a los lados */
+    padding: 40px 20px;
+}
+
+/* ==========================================
+   TARJETAS DE PRODUCTO (ARTICLES)
+   ========================================== */
+
+/* Tarjeta contenedora de cada producto */
+article {
+    /* Fondo blanco para destacar sobre el fondo beige */
+    background-color: #ffffff;
+    /* Esquinas redondeadas de la tarjeta */
+    border-radius: 12px;
+    /* Relleno interno uniforme de 20px */
+    padding: 20px;
+    /* Centra todo el contenido interno (imagen, textos, precio) */
+    text-align: center;
+    /* Sombra suave alrededor de la tarjeta para efecto de elevación */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Borde gris claro por defecto */
+    border: 2px solid #e0e0e0;
+    /* Animación suave para transformaciones, sombra y color de borde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    /* Activa Flexbox en columna para organizar verticalmente el contenido */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta del producto */
+article:hover {
+    /* Mueve la tarjeta 6 píxeles hacia arriba */
+    transform: translateY(-6px);
+    /* Intensifica la sombra para simular mayor elevación */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Cambia el color del borde a amarillo Pokémon */
+    border-color: #ffcb05;
+}
+
+/* Imagen dentro de la tarjeta del producto */
+article img {
+    /* Ocupa todo el ancho disponible dentro de la tarjeta */
+    width: 100%;
+    /* Altura fija para mantener uniformidad visual */
+    height: 200px;
+    /* Mantiene la proporción de la imagen sin deformarla (se ajusta dentro del área) */
+    object-fit: contain;
+    /* Espacio inferior antes del título */
+    margin-bottom: 15px;
+    /* Transición suave para el efecto de zoom */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+article:hover img {
+    /* Realiza un leve acercamiento (zoom) del 20% a la imagen */
+    transform: scale(1.20);
+}
+
+/* Nombre o título del producto */
+article h3 {
+    /* Color azul oscuro para mayor legibilidad */
+    color: #1a252f;
+    /* Tamaño de la fuente del título */
+    font-size: 1.1rem;
+    /* Espaciado inferior */
+    margin-bottom: 10px;
+    /* Texto en negrita resaltado */
+    font-weight: 700;
+}
+
+/* Descripción general del producto */
+article p {
+    /* Forzado de tamaño de texto pequeño (sobrescribe estilos en línea previos) */
+    font-size: 0.9rem !important;
+    /* Hereda la fuente del elemento padre */
+    font-family: inherit !important;
+    /* Color de texto gris medio */
+    color: #555555 !important;
+    /* Interlineado cómodo para la lectura */
+    line-height: 1.5 !important;
+    /* Margen inferior antes del precio */
+    margin-bottom: 15px;
+    /* Ocupa el espacio vertical disponible para empujar el precio al fondo de forma pareja */
+    flex-grow: 1;
+}
+
+/* Último párrafo de la tarjeta (Precio destacado del producto) */
+article p:last-child {
+    /* Forzado de tamaño de letra grande para resaltar el precio */
+    font-size: 1.3rem !important;
+    /* Texto muy grueso (extra negrita) */
+    font-weight: 800;
+    /* Color rojo oscuro (Rojo Pokémon) */
+    color: darkred !important;
+    /* Elimina el margen inferior */
+    margin-bottom: 0;
+    /* Fondo amarillo muy claro tipo etiqueta de oferta */
+    background-color: #fff9e6;
+    /* Relleno interno: 8px arriba/abajo, 12px a los lados */
+    padding: 8px 12px;
+    /* Bordes ligeramente redondeados */
+    border-radius: 6px;
+    /* Borde punteado color amarillo Pokémon */
+    border: 1px dashed #ffcb05;
+}

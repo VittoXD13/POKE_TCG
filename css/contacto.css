@@ -1,0 +1,44 @@
+
+header {
+    background-color: darkred;
+    text-align: center;
+}
+
+.menu{
+  margin: 10px;
+}
+
+.menu a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+.menu a:hover {
+    color: #ffcb05;
+}
+
+main {
+    padding: 40px 20px;
+    background-color: beige;
+}
+
+#aboutUs {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 30px;
+}
+
+#aboutUs h2 {
+    color: #2a75bb; /* Azul clásico de Pokémon */
+    margin-bottom: 20px;
+}
+
+#aboutUs p {
+    color: #000000;
+    line-height: 1.6;
+    font-size: 1rem;
+}

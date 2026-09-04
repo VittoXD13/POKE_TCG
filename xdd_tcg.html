@@ -1,0 +1,157 @@
+<!-- Indica al navegador que este documento está escrito con la norma HTML5 -->
+<!DOCTYPE html>
+
+<!-- Apertura de la etiqueta principal del documento HTML y especifica que el idioma del contenido es español (es) -->
+<html lang="es">
+
+<!-- Secciones de cabecera/metadatos del documento: no visibles directamente en la página web -->
+<head>
+    <!-- Define la codificación de caracteres como UTF-8 (permite acentos, tildes y caracteres especiales) -->
+    <meta charset="UTF-8">
+
+    <!-- Configura la página para que sea responsiva y se adapte al ancho de la pantalla de dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Establece el título que aparecerá en la pestaña del navegador -->
+    <title>Liga Pokémon TCG</title>
+
+    <!-- Importa la librería CSS externa de Bootstrap (versión 5.3.8) mediante CDN para estilos globales -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Enlaza el archivo de estilos CSS personalizado localizado en la carpeta 'css' -->
+    <link rel="stylesheet" href="css/xdd.css"> 
+</head>
+
+<!-- Inicio del cuerpo de la página: contiene todo el contenido visible para el usuario -->
+<body>
+
+    <!-- Encabezado superior de la página web (suele alojar logos y menús de navegación) -->
+    <header>
+        <!-- Muestra el logo principal de Pokémon TCG con ancho de 400px, alto de 200px, texto alternativo si no carga, y alineado al centro en bloque -->
+        <img src="image/Pokémon_Trading_Card_Game_logo_logo.svg.webp" 
+             width="400" 
+             height="200" 
+             alt="Logo de Pokémon TCG" 
+             style="display: block; margin-left: auto; margin-right: auto;">
+
+        <!-- Sección del menú de navegación con la clase CSS 'menu' -->
+        <nav class="menu">
+            <!-- Enlace que redirige a la página principal / inicio -->
+            <a href="pokemon_tcg.html"> - INICIO - </a>
+            
+            <!-- Enlace que redirige a la sección/página de productos -->
+            <a href="productos_tcg.html"> - PRODUCTOS - </a>
+            
+            <!-- Enlace que redirige a la página de contacto -->
+            <a href="contacto_tcg.html"> - CONTACTO - </a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal y central de la página web -->
+    <main>
+
+        <!-- Primera sección del contenido principal identificada con la ID 'aboutUs' (sobre nosotros / reglas) -->
+        <section id="aboutUs">
+            <!-- Título principal de nivel 2 para la sección -->
+            <h2>Liga Pokémon</h2>
+
+            <!-- Primer párrafo informativo sobre la bienvenida y el desafío de la Liga -->
+            <p>Has llegado a un desafío reservado para los entrenadores más preparados. Aquí tendrás la oportunidad de enfrentarte a los 3 Administradores de la Liga Pokémon y demostrar que tienes lo necesario para convertirte en el campeón.</p>
+
+            <!-- Segundo párrafo explicando las condiciones de victoria y derrota -->
+            <p>A medida que avances y consigas victorias, recibirás premios por cada combate ganado. Sin embargo, cuidado: una sola derrota significará el fin de tu desafío en la Liga.</p>
+            
+            <!-- Subtítulo de nivel 3 para la sección de premios -->
+            <h3>Premios</h3>
+
+            <!-- Párrafo aclaratorio sobre los premios -->
+            <p>Los premios serán anunciados próximamente.</p>
+            
+            <!-- Subtítulo de nivel 3 para las reglas -->
+            <h3>Reglas de la Liga</h3>
+
+            <!-- Lista desordenada (con viñetas) que contiene cada una de las reglas -->
+            <ul>
+                <!-- Elemento de lista 1: regla de enfrentamientos -->
+                <li>Deberás enfrentarte a cada uno de los 3 Administradores.</li>
+
+                <!-- Elemento de lista 2: restricción del mazo -->
+                <li>Deberás utilizar el mismo mazo durante toda la Liga.</li>
+
+                <!-- Elemento de lista 3: prohibición de cambios de mazo -->
+                <li>No está permitido cambiar, modificar ni reemplazar tu mazo entre combates.</li>
+
+                <!-- Elemento de lista 4: eliminación por derrota -->
+                <li>Cada enfrentamiento será decisivo: si pierdes un solo combate, quedas eliminado de la Liga.</li>
+
+                <!-- Elemento de lista 5: restricción de reintento -->
+                <li>Una vez eliminado, no podrás volver a participar en la Liga Pokémon.</li>
+            </ul>
+
+            <!-- Subtítulo de nivel 3 previo a la presentación de oponentes -->
+            <h3> Oponentes a derrotar</h3>
+        </section>
+
+        <!-- Segunda sección del contenido principal identificada con la ID 'admins' para mostrar a los oponentes -->
+        <section id="admins">
+
+            <!-- Contenedor/tarjeta para el primer administrador/oponente -->
+            <article>
+                <!-- Imagen del Pokémon que representa al mazo del primer administrador -->
+                <img src="image/xdd/Ogerpon_planta.png" alt="Ogerpon Planta EX">
+
+                <!-- Título con el nombre del mazo o Pokémon principal -->
+                <h3>Ogerpon Planta EX</h3>
+
+                <!-- Párrafo descriptivo con estilos en línea (tamaño, fuente, altura de línea y color café) -->
+                <p style="font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6; color: #795548;">
+                    Mazo de Ogerpon planta
+                </p>
+
+                <!-- Párrafo con el nombre del jugador/administrador -->
+                <p>Pablo Navarro</p>
+            </article>
+
+            <!-- Contenedor/tarjeta para el segundo administrador/oponente -->
+            <article>
+                <!-- Imagen del Pokémon que representa al segundo mazo -->
+                <img src="image/xdd/mega darkrai.png" alt="Mega-Darkrai EX">
+
+                <!-- Título del mazo -->
+                <h3>Mega-Darkrai EX</h3>
+
+                <!-- Párrafo descriptivo del mazo con estilos en línea -->
+                <p style="font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6; color: #795548;">
+                    Mazo de Mega-Darkrai EX
+                </p>
+
+                <!-- Párrafo con el nombre del jugador/administrador -->
+                <p>Juan Camilla Flores</p>
+            </article>
+
+            <!-- Contenedor/tarjeta para el tercer administrador/oponente -->
+            <article>
+                <!-- Imagen de la carta/Pokémon misterioso -->
+                <img src="image/xdd/carta_random.jpg" alt="Carta Random">
+
+                <!-- Título del mazo -->
+                <h3>Random</h3>
+
+                <!-- Párrafo descriptivo informal con estilos en línea -->
+                <p style="font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.6; color: #795548;">
+                    quien sabe que chingadera es eso
+                </p>
+
+                <!-- Párrafo que combina una pequeña imagen miniatura de 'Aron' colocada mediante estilos en línea junto al nombre del jugador -->
+                <p>
+                    <img src="image/xdd/Aron.png" alt="Aron" style="width: 35px; height: auto; vertical-align: middle; position: relative; left: -10px;"> 
+                    Tapia
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Importación del script de JavaScript de Bootstrap (necesario para componentes interactivos de la librería) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

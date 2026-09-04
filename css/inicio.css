@@ -1,0 +1,107 @@
+/* ==========================================
+   ENCABEZADO (HEADER)
+   ========================================== */
+
+/* Estructura del contenedor superior */
+header {
+    /* Color de fondo rojo oscuro del encabezado */
+    background-color: darkred;
+    /* Centra horizontalmente el contenido interno */
+    text-align: center;
+}
+
+/* ==========================================
+   MENÚ DE NAVEGACIÓN
+   ========================================== */
+
+/* Contenedor principal de los enlaces del menú */
+.menu {
+    /* Margen de 10px arriba/abajo y 0 a los lados */
+    margin: 10px 0;
+    /* Activa Flexbox para organizar los enlaces en línea */
+    display: flex;
+    /* Centra horizontalmente los enlaces dentro del contenedor */
+    justify-content: center;
+    /* Alinea verticalmente los elementos al centro */
+    align-items: center;
+    /* Permite que los enlaces pasen a una nueva línea en pantallas pequeñas */
+    flex-wrap: wrap;
+    /* Espacio o separación constante de 10px entre cada enlace */
+    gap: 10px;
+}
+
+/* Enlaces individuales dentro del menú */
+.menu a {
+    /* Color de texto blanco suave */
+    color: whitesmoke;
+    /* Elimina el subrayado por defecto de las etiquetas <a> */
+    text-decoration: none;
+    /* Margen lateral de 10px para separar los enlaces */
+    margin: 0 10px;
+    /* Tamaño del texto del enlace */
+    font-size: 1.1rem;
+    /* Grosor del texto (semi-negrita) */
+    font-weight: 600;
+    /* Relleno interno: 5px arriba/abajo, 10px a los lados */
+    padding: 5px 10px;
+    /* Bordes ligeramente redondeados para el área interactiva */
+    border-radius: 5px;
+    /* Animación suave de 0.25s al cambiar color y fondo al pasar el cursor */
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+/* Estado interactivo al pasar el cursor sobre un enlace */
+.menu a:hover {
+    /* Cambia el color del texto a amarillo Pokémon */
+    color: #ffcb05;
+    /* Agrega un fondo blanco semitransparente al hacer hover */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================
+   CONTENIDO PRINCIPAL (MAIN)
+   ========================================== */
+
+/* Estilos base para el área de contenido principal */
+main {
+    /* Espaciado interno: 40px arriba/abajo y 20px a los lados */
+    padding: 40px 20px;
+    /* Color de fondo beige para la sección principal */
+    background-color: beige;
+}
+
+/* ==========================================
+   SECCIÓN "SOBRE NOSOTROS" (#aboutUs)
+   ========================================== */
+
+/* Tarjeta o contenedor de la sección */
+#aboutUs {
+    /* Limita el ancho máximo del bloque para facilitar la lectura */
+    max-width: 850px;
+    /* Centra horizontalmente el contenedor en la pantalla */
+    margin: auto;
+    /* Centra todo el texto dentro del contenedor */
+    text-align: center;
+    /* Fondo blanco para contrastar con el fondo beige del main */
+    background: white;
+    /* Espaciado interno uniforme de 30px */
+    padding: 30px;
+}
+
+/* Título de la sección */
+#aboutUs h2 {
+    /* Color azul clásico del logotipo de Pokémon */
+    color: #2a75bb;
+    /* Espacio inferior para separarlo del párrafo */
+    margin-bottom: 20px;
+}
+
+/* Párrafos descriptivos de la sección */
+#aboutUs p {
+    /* Color de texto negro puro */
+    color: #000000;
+    /* Interlineado cómodo que mejora la legibilidad */
+    line-height: 1.6;
+    /* Tamaño base de la fuente */
+    font-size: 1rem;
+}

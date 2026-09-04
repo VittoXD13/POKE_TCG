@@ -1,0 +1,171 @@
+/* Seleccionador universal: Aplica a absolutamente todos los elementos HTML */
+* {
+    /* Incluye el padding y el border dentro del tamaño total del ancho y alto del elemento */
+    box-sizing: border-box;
+    /* Elimina el margen exterior por defecto de todos los elementos */
+    margin: 0;
+    /* Elimina el relleno/padding interior por defecto de todos los elementos */
+    padding: 0;
+}
+
+/* Estilos globales para el cuerpo completo de la página */
+body {
+    /* Define la tipografía principal; prueba 'Segoe UI', luego fuentes del sistema, Apple, o cualquier sans-serif */
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    /* Establece el color de fondo general de la página en beige */
+    background-color: beige;
+    /* Define el color base del texto como un gris muy oscuro (#222) */
+    color: #222;
+}
+
+/* Estilos para el encabezado de la página */
+header {
+    /* Define el fondo del encabezado en rojo oscuro */
+    background-color: darkred;
+    /* Centra horizontalmente todo el contenido/texto dentro del encabezado */
+    text-align: center;
+    /* Añade espacio interior: 25px arriba, 15px a los lados y 15px abajo */
+    padding: 25px 15px 15px;
+    /* Agrega una sombra tenue hacia abajo para darle un efecto elevado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor del menú de navegación */
+.menu {
+    /* Añade un margen de 10px arriba y abajo, y 0 a los lados */
+    margin: 10px 0;
+    /* Activa el modelo de caja flexible Flexbox para alineación sencilla */
+    display: flex;
+    /* Centra horizontalmente todos los elementos hijos del menú */
+    justify-content: center;
+    /* Centra verticalmente los elementos dentro del menú */
+    align-items: center;
+    /* Permite que los botones bajen a una nueva línea si no caben en pantallas pequeñas */
+    flex-wrap: wrap;
+    /* Crea una separación horizontal y vertical de 10px entre cada enlace */
+    gap: 10px;
+}
+
+/* Estilos para cada enlace individual dentro del menú */
+.menu a {
+    /* Define el color del texto del enlace a blanco humo */
+    color: whitesmoke;
+    /* Quita el subrayado automático tradicional de los enlaces */
+    text-decoration: none;
+    /* Aplica un margen horizontal de 10px a la izquierda y derecha */
+    margin: 0 10px;
+    /* Define el tamaño de letra ligeramente más grande que el texto base (1.1rem) */
+    font-size: 1.1rem;
+    /* Define el grosor del texto como seminegrita (600) */
+    font-weight: 600;
+    /* Añade espacio interior alrededor del texto (5px arriba/abajo, 10px lados) */
+    padding: 5px 10px;
+    /* Redondea las esquinas del borde del enlace en 5px */
+    border-radius: 5px;
+    /* Crea una transición suave de 0.25s para el color y el fondo al pasar el cursor */
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+/* Efecto al pasar el cursor (hover) sobre un enlace del menú */
+.menu a:hover {
+    /* Cambia el color del texto a amarillo claro/dorado (#ffcb05) */
+    color: #ffcb05;
+    /* Agrega un fondo blanco traslúcido al 10% de opacidad */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para la sección de cuadrícula donde se muestran las tarjetas de administradores */
+#admins {
+    /* Activa la maquetación basada en rejilla (Grid Layout) */
+    display: grid;
+    /* Genera columnas responsivas automáticas: mínimo 260px de ancho cada una */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Espacio de separación de 25px entre cada tarjeta */
+    gap: 25px;
+    /* Limita el ancho máximo del contenedor a 1100px */
+    max-width: 1100px;
+    /* Centra horizontalmente toda la sección en la pantalla */
+    margin: 0 auto;
+    /* Añade espacio interior: 40px arriba/abajo y 20px a los lados */
+    padding: 40px 20px;
+}
+
+/* Estilos para cada tarjeta/tarjeta de administrador (elemento <article>) */
+article {
+    /* Fondo blanco para destacar del fondo beige */
+    background-color: #ffffff;
+    /* Redondea las cuatro esquinas de la tarjeta con 12px */
+    border-radius: 12px;
+    /* Espacio interno de 20px dentro de la tarjeta */
+    padding: 20px;
+    /* Centra el texto dentro de la tarjeta */
+    text-align: center;
+    /* Sombra suave alrededor de la tarjeta para dar volumen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Borde fino de 2px de color gris claro (#e0e0e0) */
+    border: 2px solid #e0e0e0;
+    /* Transición suave de 0.3s para movimiento, sombra y borde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    /* Convierte la tarjeta en un contenedor Flexbox */
+    display: flex;
+    /* Coloca los elementos hijos (imagen, h3, p) en una columna vertical */
+    flex-direction: column;
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+article:hover {
+    /* Eleva la tarjeta 6px hacia arriba */
+    transform: translateY(-6px);
+    /* Intensifica la sombra para acentuar la sensación de flotación */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    /* Cambia el color del borde al mismo amarillo/dorado (#ffcb05) */
+    border-color: #ffcb05;
+}
+
+/* Estilos para las imágenes dentro de cada tarjeta */
+article img {
+    /* La imagen ocupa todo el ancho disponible del contenedor */
+    width: 100%;
+    /* Define una altura fija de 200px para uniformar las imágenes */
+    height: 200px;
+    /* Ajusta la imagen completa dentro del área sin recortarla ni deformarla */
+    object-fit: contain;
+    /* Agrega un margen inferior de 15px para separarla del título */
+    margin-bottom: 15px;
+    /* Permite una animación suave en las transformaciones de la imagen */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto sobre la imagen cuando se pasa el cursor por encima de la tarjeta */
+article:hover img {
+    /* Aumenta el tamaño de la imagen un 20% (efecto de zoom) */
+    transform: scale(1.20);
+}
+
+/* Estilos para los títulos h3 dentro de las tarjetas */
+article h3 {
+    /* Color de texto azul oscuro/grisáceo */
+    color: #1a252f;
+    /* Tamaño de fuente de 1.1rem */
+    font-size: 1.1rem;
+    /* Separación de 10px con el párrafo inferior */
+    margin-bottom: 10px;
+    /* Texto en negrita (700) */
+    font-weight: 700;
+}
+
+/* Estilos para los párrafos dentro de la tarjeta */
+article p {
+    /* Tamaño de letra de 0.9rem (el !important sobrescribe estilos en línea HTML o Bootstrap) */
+    font-size: 0.9rem !important;
+    /* Hereda la tipografía de su elemento padre */
+    font-family: inherit !important;
+    /* Color de texto gris medio (#555555) */
+    color: #555555 !important;
+    /* Altura de línea de 1.5 para dar más legibilidad al texto */
+    line-height: 1.5 !important;
+    /* Margen inferior de 15px */
+    margin-bottom: 15px;
+    /* Permite que el párrafo se expanda para rellenar el espacio libre verticalmente */
+    flex-grow: 1;
+}
